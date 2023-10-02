@@ -1,14 +1,18 @@
-export default function Login() {
+import { cookies } from 'next/headers'
+import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
+
+export default async function Login() {
+
     return (
-      <form action="/auth/login" method="post">
+      <form action="/auth/login" method="post" className="login-form flex flex-col">
         <label htmlFor="email">Email</label>
         <input name="email" />
         <label htmlFor="password">Password</label>
         <input type="password" name="password" />
-        <button>Sign In</button>
-        <button formAction="/auth/sign-up">Sign Up</button>
-        <button formAction="/auth/logout">Sign Out</button>
+        <button className="mx-auto  my-2 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded max-w-max">Sign In</button>
+        <button formAction="/auth/sign-up" className="mx-auto  my-2 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded max-w-max" >Sign Up</button>
         <button
+        className="mx-auto  my-2 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded max-w-max"
             formAction="/auth/github">
 
             Sign in with GitHub

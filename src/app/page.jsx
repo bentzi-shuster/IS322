@@ -1,6 +1,12 @@
 import Post from "@/components/Post";
-
-export default function Home() {
+import { cookies } from 'next/headers'
+import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
+export default async function Home() {
+  const supabase = createServerComponentClient({ cookies })
+  let user =await supabase.auth.setSession(cookies).then((res) => res.data)
+  if (user) {
+    console.log( user)
+  }
   return (
     <>
     <div

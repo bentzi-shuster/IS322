@@ -1,3 +1,4 @@
+import { Nav } from '@/components/Nav'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -15,7 +16,10 @@ export default function RootLayout({ children }) {
       className='
       bg-gradient-to-b from-green-100 to-green-200 bg-fixed
       '
-      >{children}</body>
+      >
+            <Nav/>
+        {children}
+        </body>
     </html>
   )
 }
