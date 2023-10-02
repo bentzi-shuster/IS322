@@ -1,5 +1,6 @@
 import Post from "@/components/Post";
 import { cookies } from 'next/headers'
+export const dynamic = 'force-dynamic'
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
 export default async function Home() {
   const supabase = createServerComponentClient({ cookies })
