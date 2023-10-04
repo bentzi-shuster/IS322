@@ -11,11 +11,11 @@ export async function POST(request) {
   const password = formData.get('password')
   const supabase = createRouteHandlerClient({ cookies })
 
-  await supabase.auth.signInWithPassword({
+  const { data, error } =   await supabase.auth.signInWithPassword({
     email,
     password,
   })
-
+console.log(data, error)
   return NextResponse.redirect(requestUrl.origin, {
     status: 301,
   })

@@ -4,10 +4,10 @@ export const dynamic = 'force-dynamic'
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
 export default async function Home() {
   const supabase = createServerComponentClient({ cookies })
-  let user =await supabase.auth.setSession(cookies).then((res) => res.data)
-  if (user) {
-    console.log( user)
-  }
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+console.log(user)  
   return (
     <>
     <div
@@ -27,8 +27,9 @@ my-4
     >
     <h1 className="text-2xl">Let Him Cook</h1>
     </div>
-    
-    
+    {user && (   
+    <h1> Hello {user.user_metadata["full_name"]}, <br></br>email: {user["email"]}</h1>
+     )}
         <Post comments={["hi mom"]} date={Date.now()} likes={19} title={"test"}  userobj={{name:"joe biden"}} bgImgUrl="/chicken-empanadas-de-pollo-3029662-hero-01-b9c7760ffda1421cabd946b9ab74ebc8-761863022.jpg" bgImgAlt="temp"/>
 
     </>

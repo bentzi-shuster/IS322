@@ -14,3 +14,4 @@ export async function POST(request) {
     status: 301,
   })
 }
+// https://supabase.com/docs/guides/auth/auth-helpers/nextjs

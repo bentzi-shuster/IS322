@@ -1,9 +1,7 @@
 import { Nav } from '@/components/Nav'
 import './globals.css'
 import { Inter } from 'next/font/google'
-
 const inter = Inter({ subsets: ['latin'] })
-
 export const metadata = {
   title: 'Let Him Cook',
   description: 'The place for chefs to share their recipes',
@@ -18,7 +16,7 @@ export default function RootLayout({ children }) {
       '
       >
             <Nav/>
-        {children}
+            {children}
         </body>
     </html>
   )

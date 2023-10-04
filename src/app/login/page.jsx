@@ -1,19 +1,60 @@
-export default async function Login() {
+"use client"
 
+import { createClientComponentClient } from "@supabase/auth-helpers-nextjs"
+
+export default function Login() {
+  const supabase = createClientComponentClient()
+  async function signInWithGitHub() {
+    
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: 'github',
+      options:
+      {
+        redirectTo: 'http://localhost:3000/auth/callback'
+
+      }
+    })
+  }
+
+async function resetPWD(){
+    await supabase.auth.resetPasswordForEmail(prompt("email"), {
+      redirectTo: process.env.NEXT_PUBLIC_REDIRECT_URL+'/auth/callback?next=/account/update-password',
+    })
+  }
     return (
-      <form action="/auth/login" method="post" className="login-form flex flex-col">
-        <label htmlFor="email">Email</label>
-        <input name="email" />
-        <label htmlFor="password">Password</label>
-        <input type="password" name="password" />
-        <button className="mx-auto  my-2 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded max-w-max">Sign In</button>
-        <button formAction="/auth/sign-up" className="mx-auto  my-2 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded max-w-max" >Sign Up</button>
-        <button
-        className="mx-auto  my-2 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded max-w-max"
-            formAction="/auth/github">
+    <>
 
-            Sign in with GitHub
-            </button>
-      </form>
+
+
+     {/* <form action="/auth/login" method="post">
+      email: <input type="text" name="email" />
+      password: <input type="password" name="password" />
+      <button className="p-4">Sign In</button> */}
+      
+      {/* </form> */}
+
+      <form action="/auth/login" method="post" className="mt-[5em] p-4 bg-emerald-200 border-2 border-gray-400 border-solid rounded-md mx-auto flex flex-col max-w-md ">
+      <label htmlFor="email">Email</label>
+      <input name="email"  type="email" />
+      <label htmlFor="password">Password</label>
+      <input type="password" name="password" />
+      <div className="flex flex-row justify-between">
+
+
+      <button formAction="/auth/sign-up" className="m-4 py-2 px-4 bg-slate-200 rounded-md text-black" >Sign Up</button>
+      {/* <button formAction="/auth/logout" className="m-4 py-2 px-4 bg-slate-200 rounded-md text-black" >Sign Out</button> */}
+      <button className="m-4 py-2 px-4 bg-slate-200 rounded-md text-black"
+      type="button"
+      onClick={signInWithGitHub}
+     > GitHub Sign In 
+     </button>
+      <button className="m-4 py-2 px-4 bg-slate-800 rounded-md text-white" >
+       Sign In</button>
+      </div>
+    </form>
+
+    <button onClick={resetPWD}>ResetPWD</button>
+</>
+    
     )
   }
