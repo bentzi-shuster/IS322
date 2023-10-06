@@ -34,13 +34,14 @@ export const Nav = ({pfplink,isLoggedIn}) => {
       </label>
       <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
         <li>
-          <a className="justify-between">
+          <a href='/account/profile' className="justify-between">
             Profile
-            <span className="badge">New</span>
           </a>
         </li>
-       <li><form action="/auth/logout" method="post">
-         <button>Sign Out</button>
+       <li><form action="/auth/logout" method="post" className="flex w-full h-full p-0 ">
+        {/* make button fill space */}
+         <button className="flex-1 text-left py-0.5 px-3"
+         >Sign Out</button>
           </form>
 </li>
       </ul>
