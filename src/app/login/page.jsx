@@ -1,5 +1,6 @@
 "use client"
 
+import { resetPWD } from "@/lib/pwdReset"
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs"
 
 export default function Login() {
@@ -16,11 +17,11 @@ export default function Login() {
     })
   }
 
-async function resetPWD(){
-    await supabase.auth.resetPasswordForEmail(prompt("email"), {
-      redirectTo: process.env.NEXT_PUBLIC_REDIRECT_URL+'/auth/callback?next=/account/update-password',
-    })
-  }
+// async function resetPWD(){
+//     await supabase.auth.resetPasswordForEmail(prompt("email"), {
+//       redirectTo: process.env.NEXT_PUBLIC_REDIRECT_URL+'/auth/callback?next=/account/update-password',
+//     })
+//   }
     return (
     <>
 
@@ -53,7 +54,7 @@ async function resetPWD(){
       </div>
     </form>
 <a href="/signup">Signup HERE</a> <br />
-    <button onClick={resetPWD}>ResetPWD</button>
+    <button onClick={()=>resetPWD(supabase)}>ResetPWD</button>
 </>
     
     )
