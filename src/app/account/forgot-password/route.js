@@ -6,9 +6,16 @@ export const dynamic = 'force-dynamic'
 
 export async function POST(request) {
   const requestUrl = new URL(request.url)
-  const supabase = createRouteHandlerClient({ cookies })
+  const cookieStore = cookies()
+  let formData = await request.formData()
+    let email = formData.get('email')
+  const supabase = createRouteHandlerClient({ cookies: () => cookieStore })
 
-  await supabase.auth.signOut()
+
+let data =  await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: process.env.NEXT_PUBLIC_REDIRECT_URL+'/auth/callback?next=/account/update-password',
+    })
+
 
   return NextResponse.redirect(`${requestUrl.origin}/account/login`, {
     status: 301,

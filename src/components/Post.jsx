@@ -10,7 +10,7 @@ bg-gradient-to-t from-[rgba(0,0,0,1)] to-[rgba(0,0,0,0)] absolute top-0 left-0 r
 '></div>
 
 <Image height={"150"} width={"150"} src={bgImgUrl} alt={bgImgAlt} 
-className='absolute top-0 left-0 rounded-md -z-10 w-full h-full object-cover'
+className='absolute top-0 left-0 rounded-md  w-full h-full object-cover'
 />
 
 

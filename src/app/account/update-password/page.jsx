@@ -14,7 +14,7 @@ console.log(data)
 if(!data.error){
   console.log("password updated");
     // redirect to login
-    window.location.href = '/login'
+    window.location.href = '/account/login'
 }else{
   console.log("password not updated");
   alert(data.error.message)
@@ -25,14 +25,16 @@ export const ResetPWDPage = () => {
     let [confirmPassword, setConfirmPassword] =useState('')
   return (
     <>
-    <input type="password" name="password" id="password" onChange={(e)=>setPassword(e.target.value)} />
-
-    <input type="password" name="confirmPassword" id="confirmPassword" onChange={(e)=>setConfirmPassword(e.target.value)} />
+    <form onSubmit={(e)=>e.preventDefault()}> 
+    <label htmlFor="password">Password</label>
+    <input type="password" name="password" id="password" onChange={(e)=>setPassword(e.target.value)} className="input input-bordered" />
+<label htmlFor="confirmPassword">Confirm Password</label>
+    <input type="password" name="confirmPassword" id="confirmPassword" onChange={(e)=>setConfirmPassword(e.target.value)} className="input input-bordered" />
     <button
     onClick={()=>updatePWD(password, confirmPassword)}
     
     >Reset Password</button>    
-    
+    </form>
     </>
   )
 }
