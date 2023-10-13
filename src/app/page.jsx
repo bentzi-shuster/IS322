@@ -1,8 +1,9 @@
-import Post from "@/components/Post";
+// import Post from "@/components/Post";
 import { cookies } from 'next/headers'
 export const dynamic = 'force-dynamic'
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
-import Hero from "@/components/Hero";
+import Image from 'next/image'
+// import Hero from "@/components/Hero";
 export default async function Home() {
   const supabase = createServerComponentClient({ cookies })
   const {
@@ -13,7 +14,16 @@ console.log(user)
     <>
 
 {!user && (
-  <Hero />
+  <div className="hero min-h-screen">
+  <div className="hero-content flex-col lg:flex-row">
+    <div>
+      <h1 className="text-5xl font-bold">Just another crappy twitter clone</h1>
+      <p className="py-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus officia aperiam quas quam quos laboriosam dolores alias iure autem nisi. Alias asperiores optio tempora veniam nobis totam dolor, et quae!</p>
+      <a href="/account/login"
+       role='button' className="btn btn-primary">Get Started</a>
+    </div>
+  </div>
+</div>
 )}
     {user && (   
     <h1> Hello {user.user_metadata["full_name"]}, <br></br>email: {user["email"]}</h1>

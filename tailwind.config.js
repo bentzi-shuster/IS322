@@ -8,20 +8,27 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        mytheme: {
-"primary": "#7fc77f",
-"secondary": "#d0e3f6",
-"accent": "#2f73b6",
-"neutral": "##000000",
-"base-100": "#f7f7f7",
-"info": "#7dd3fc",
-"success": "#86efac",
-"warning": "#fde68a",
-"error": "#fca5a5",
+        daisyui: {
+          themes: [
+            {
+              mytheme: {
+    "primary": "#4e5556",
+    "secondary": "#0d0d0d",
+    "accent": "#0d3659",
+    "neutral": "#607276",
+    "base-100": "#ffffff",
+    "info": "#3abff8",
+    "success": "#36d399",
+    "warning": "#fbbd23",
+    "error": "#f87272",
+              },
+            },
+          ],
         },
       },
     ],
   },
+
   theme: {
     extend: {
       colors: {
@@ -90,8 +97,7 @@ module.exports = {
           900: 'var(--accent-900)',
           950: 'var(--accent-950)',
         },
-       },
-       
+       },       
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

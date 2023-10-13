@@ -18,10 +18,12 @@ export const Nav = ({pfplink,isLoggedIn}) => {
 
     //     </ul>
     // </nav>
-    <div className="navbar bg-base-100">
+    <>
+    <nav className="navbar bg-primary-800 dark:bg-primary-900 mt-3 rounded-lg w-[95%] -translate-x-1/2 left-1/2 fixed z-40 shadow-2xl">
+
   <div className="flex-1">
     <a className="btn btn-ghost normal-case text-xl" href="/">
-      <span className="text-lg font-bold">Let Him Cook</span>
+      <span className="text-lg font-bold">$#*tter</span>
       </a>
   </div>
   {isLoggedIn ? (
@@ -32,7 +34,7 @@ export const Nav = ({pfplink,isLoggedIn}) => {
           <Image src={pfplink} width={40} height={40} className="rounded-full" alt="profile picture" />
         </div>
       </label>
-      <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+      <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-primary-800 dark:bg-primary-900  rounded-box w-52">
         <li>
           <a href='/account/profile' className="justify-between">
             Profile
@@ -49,8 +51,14 @@ export const Nav = ({pfplink,isLoggedIn}) => {
     </div>
   ):
   (<div className="flex-none gap-2">
-    <a href="/account/login" className="btn btn-ghost">Login</a>
+    <a role="button" href="/account/login" className="btn btn-primary">Login</a>
     </div>)}
-    </div>
+    </nav>
+ <div className="h-20"></div> 
+ {/* 
+ this is a spacer div to make sure the nav bar doesn't cover the content
+ */}
+ 
+    </>
   )
 }

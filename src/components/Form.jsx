@@ -1,7 +1,7 @@
 const Form = ({data}) => {
     return (
         <div className="flex justify-center items-center md:w-1/3 sm:w-5/6 w-full mx-auto my-10">
-        <form action={data.action} method={data.method} className="card-body bg-base-100 shadow-2xl">
+        <form action={data.action} method={data.method} className="card-body bg-primary-800 shadow-2xl">
             <h1 className="text-2xl font-bold mb-4">{data.title}</h1>
        {data.formdata.map((item, index) => {
               return (
@@ -38,7 +38,7 @@ const Form = ({data}) => {
                         </button>
                     ) : null}
                     {item.type==="button" &&!item.formAction ? (
-                        <button onClick={item.onClick} className="btn btn-primary"
+                        <button onClick={item.onClick} className="btn btn-primary hover:bg-primary-700" 
                          type={item.btnType}>
                             {item.value}
                         </button>
@@ -60,7 +60,8 @@ const Form = ({data}) => {
                     ) : null}
                     {item.type==="link" ? (
                         <>
-                        <a href={item.href} className="link link-neutral">{item.value}</a>
+                        <a href={item.href} className="link link-neutral hover:text-primary-100 hover:text-primary-400
+                        ">{item.value}</a>
                         </>
                     ) : null}
                 </div>

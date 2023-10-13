@@ -3,7 +3,7 @@ import './globals.css'
 import { cookies } from 'next/headers'
 export const dynamic = 'force-dynamic'
 export const metadata = {
-  title: 'Let Him Cook',
+  title: '$#*tter',
   description: 'The place for chefs to share their recipes',
 }
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
@@ -16,7 +16,8 @@ export default async function RootLayout({ children }) {
     <html lang="en">
       <body
       className='
-      bg-background-50
+      dark:bg-background-800
+      bg-background-600
       h-screen
       '
       >
