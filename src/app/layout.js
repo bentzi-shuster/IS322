@@ -7,6 +7,7 @@ export const metadata = {
   description: 'The place for chefs to share their recipes',
 }
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
+import Footer from '@/components/Footer'
 export default async function RootLayout({ children }) {
   const supabase = createServerComponentClient({ cookies })
   const {
@@ -23,6 +24,7 @@ export default async function RootLayout({ children }) {
       >
             <Nav pfplink={user?.user_metadata?.avatar_url} isLoggedIn={!!user} />
             {children}
+            <Footer />
         </body>
     </html>
   )

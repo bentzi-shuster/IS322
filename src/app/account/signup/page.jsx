@@ -105,12 +105,12 @@ data={
 }
 />
 <div className="flex flex-row items-center max-w-md 3 mx-auto justify-around">
-    <button onClick={()=>resetPWD(supabase)} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-4
-    ">ResetPWD</button>
-  <a href="/account/login" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-4">Login HERE</a> 
+    {/* <button onClick={()=>resetPWD(supabase)} className="dark:bg-primary-900 bg-primary-800 hover:bg-primary-700 dark:hover:bg-primary-600 text-white font-bold py-2 px-4 rounded m-4
+    ">ResetPWD</button> */}
+  <a href="/account/login" className="dark:bg-primary-900 bg-primary-800 hover:bg-primary-700 dark:hover:bg-primary-600 text-white font-bold py-2 px-4 rounded m-4">Login HERE</a> 
+
 
 </div>
-
   </>  
     )
   }

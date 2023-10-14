@@ -1,7 +1,7 @@
 const Form = ({data}) => {
     return (
         <div className="flex justify-center items-center md:w-1/3 sm:w-5/6 w-full mx-auto my-10">
-        <form action={data.action} method={data.method} className="card-body bg-primary-800 shadow-2xl">
+        <form action={data.action} method={data.method} className="card-body bg-primary-800 shadow-2xl dark:bg-primary-900 ">
             <h1 className="text-2xl font-bold mb-4">{data.title}</h1>
        {data.formdata.map((item, index) => {
               return (
@@ -60,7 +60,7 @@ const Form = ({data}) => {
                     ) : null}
                     {item.type==="link" ? (
                         <>
-                        <a href={item.href} className="link link-neutral hover:text-primary-100 hover:text-primary-400
+                        <a href={item.href} className="link link-neutral  hover:text-primary-400
                         ">{item.value}</a>
                         </>
                     ) : null}
