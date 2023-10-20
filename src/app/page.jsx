@@ -54,7 +54,7 @@ console.log(data)
 <div className=' flex flex-col xl:flex-row gap-4 mt-10'>
 
 
-<div className="card w-96 bg-primary-700 shadow-xl">
+<div className="card bg-primary-700 shadow-xl w-full md:w-96">
   <div className="card-body">
   <div className="chat chat-start">
   <div className="ms-14 chat-bubble chat-bubble-info">The release of the app was a shit show</div>
@@ -73,7 +73,7 @@ console.log(data)
 </div>
 
 
-<div className="card w-96 bg-primary-700 shadow-xl">
+<div className="card w-full md:w-96 bg-primary-700 shadow-xl">
   <div className="card-body">
   <div className="chat chat-start">
   <div className="ms-14 chat-bubble chat-bubble-info">What a pile of crap, 0/10, wouldnt recommend
@@ -92,7 +92,7 @@ console.log(data)
 </div>
 
 
-<div className="card w-96 bg-primary-700 shadow-xl">
+<div className="card w-full md:w-96 bg-primary-700 shadow-xl">
   <div className="card-body">
   <div className="chat chat-start">
   <div className="ms-14 chat-bubble chat-bubble-info">I love this app like I love my son</div>
