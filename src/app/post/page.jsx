@@ -18,11 +18,34 @@ export default async function page() {
   return (
     <>
     
-<h1 className="text-3xl font-bold">Post</h1>
-    <p>
-        If you can see this, you are signed in!
-    </p>
 
+<form action="#" className=" mx-auto sm:w-full md:w-4/5 lg:w-3/5 xl:w-2/5 px-10 mt-20">
+<h1 className="text-3xl font-bold">Post</h1>
+<h2 className="text-xl font-bold">Not implemented yet</h2>
+<div className="form-control w-full">
+  <label className="label">
+    <span className="label-text">Post Title</span>
+  </label>
+  <input type="text" placeholder="Title of your post" className="input input-bordered w-full" />
+
+</div>
+<div className="form-control w-full">
+  <label className="label">
+    <span className="label-text">Post Description</span>
+  </label>
+  <textarea className="textarea textarea-bordered h-24 w-full" placeholder="Description"></textarea>
+</div>
+
+<div className="form-control w-full flex flex-row">
+  <label className="cursor-pointer label flex flex-row gap-10">
+    <span className="label-text">Public</span>
+    <input type="checkbox" defaultChecked className="checkbox checkbox-info" />
+  </label>
+
+  {/* make this a radio on mobile */}
+</div>
+<button className='btn btn-info'>Post</button>
+</form>
     </>
   )
 }
