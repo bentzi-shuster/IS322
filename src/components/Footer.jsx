@@ -21,6 +21,13 @@ const Footer = () => {
  </span>
   <span className="btm-nav-label">Post</span>
 </a>
+<a href="/">
+ <span className="material-symbols-outlined h-5 w-5" >
+    home
+ </span>
+  <span className="btm-nav-label">Home</span>
+</a>
+
 <a href="/message">
  <span className="material-symbols-outlined h-5 w-5" >
     message

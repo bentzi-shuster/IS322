@@ -1,6 +1,6 @@
 const Form = ({data}) => {
     return (
-        <div className="flex justify-center items-center md:w-1/3 sm:w-5/6 w-full mx-auto my-10">
+        <div className="flex justify-center items-center xl:w-1/2 lg:w-2/3 md:w-3/4 sm:w-5/6 w-full mx-auto my-10">
         <form action={data.action} method={data.method} className="card-body bg-primary-800 shadow-2xl dark:bg-primary-900 ">
             <h1 className="text-2xl font-bold mb-4">{data.title}</h1>
        {data.formdata.map((item, index) => {

@@ -31,7 +31,14 @@ export const Nav = ({pfplink,isLoggedIn}) => {
     <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-          <Image src={pfplink} width={40} height={40} className="rounded-full" alt="profile picture" />
+          {
+            pfplink ? (
+              <Image src={pfplink} width={40} height={40} className="rounded-full" alt="profile picture" />
+            ):(
+              <span className="material-symbols-outlined !text-4xl">account_circle</span>
+            )
+          }
+          
         </div>
       </label>
       <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-primary-800 dark:bg-primary-900  rounded-box w-52">
