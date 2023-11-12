@@ -47,6 +47,11 @@ export const Nav = ({pfplink,isLoggedIn}) => {
             Profile
           </a>
         </li>
+        <li>
+          <a href='/my-posts' className="justify-between">
+            My Posts
+          </a>
+        </li>
        <li><form action="/auth/logout" method="post" className="flex w-full h-full p-0 ">
         {/* make button fill space */}
          <button className="flex-1 text-left py-0.5 px-3"

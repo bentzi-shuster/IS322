@@ -127,7 +127,7 @@ console.log(data)
     <div className="flex flex-col gap-4">
     {data?.map((post, index) => {
       return (
-        <Post key={index} post={post} />
+        <Post key={index} post={post}  showCheckbox={false}/>
       )
     })}
     </div>
