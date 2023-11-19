@@ -8,7 +8,7 @@ const Post = ({post, showCheckbox}) => {
   const supabase=createClientComponentClient()
 let [post_visible, setPost_visible] = useState(post.post_visible)
   return (<>
-<div className={"card w-96 bg-accent-900 text-neutral-content mx-auto shadow-2xl"+(post_visible ? "":" opacity-50")}>
+<div className={"card  w-11/12 md:w-96 bg-accent-900 text-neutral-content mx-auto shadow-2xl"+(post_visible ? "":" opacity-50")}>
   <div className="card-body">
     {/* {(post.post_visible ? "":"This post is private")} */}
     {!post_visible&&(<>

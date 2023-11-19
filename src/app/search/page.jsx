@@ -2,8 +2,9 @@ import React from 'react'
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
 import { notFound, redirect } from 'next/navigation'
 import { cookies } from 'next/headers'
-
-export default async function page() {
+import Search from '@/components/Search'
+import SearchAction from '../action'
+export default async function SearchPage() {
     const supabase = createServerComponentClient({
         cookies,
       })
@@ -19,10 +20,9 @@ export default async function page() {
     <>
     
 <h1 className="text-3xl font-bold">Search</h1>
-    <p>
-        If you can see this, you are signed in!
-    </p>
 
+
+<Search SearchAction={SearchAction} />
     </>
   )
 }
