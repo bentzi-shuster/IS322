@@ -34,7 +34,7 @@ console.log(data)
   <div className="hero-content flex-col">
     <div>
       <h1 className="text-5xl font-bold">Just another crappy twitter clone</h1>
-      <p className="py-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus officia aperiam quas quam quos laboriosam dolores alias iure autem nisi. Alias asperiores optio tempora veniam nobis totam dolor, et quae!</p>
+      <p className="py-6">The best place to share your thoughts and opinions while being judged by strangers for using a twitter clone on the crapper!</p>
       <a href="/account/login"
        role='button' className="btn btn-primary">Get Started</a>
        

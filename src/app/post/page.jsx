@@ -18,8 +18,7 @@ export default async function page() {
   return (
     <>
     
-
-<form action="/api/post" method='POST' className=" mx-auto sm:w-full md:w-4/5 lg:w-3/5 xl:w-2/5 px-10 mt-20">
+<form action="/api/post" method='POST' className=" mx-auto sm:w-full md:w-4/5 lg:w-3/5 xl:w-2/5 px-10 mt-2 bg-background-700 rounded-lg shadow-xl py-11">
 <h1 className="text-3xl font-bold">Post</h1>
 {/* <h2 className="text-xl font-bold">Not implemented yet</h2> */}
 <div className="form-control w-full">

@@ -19,7 +19,7 @@ export const Nav = ({pfplink,isLoggedIn}) => {
     //     </ul>
     // </nav>
     <>
-    <nav className="navbar bg-primary-800 dark:bg-primary-900 mt-3 rounded-lg w-[95%] -translate-x-1/2 left-1/2 fixed z-40 shadow-2xl">
+    <nav className="navbar bg-primary-800 dark:bg-primary-900 mt-3 rounded-lg w-[95%] -translate-x-1/2 left-1/2 fixed z-40 shadow-2xl text-white">
 
   <div className="flex-1">
     <a className="btn btn-ghost normal-case text-xl" href="/">

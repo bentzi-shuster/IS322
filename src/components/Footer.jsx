@@ -7,7 +7,7 @@ const Footer = () => {
 
 </div>
 
-<footer className="btm-nav bg-primary-800 dark:bg-primary-900 my-3 md:w-3/5 mx-auto rounded-full w-11/12">
+<footer className="btm-nav bg-primary-800 dark:bg-primary-900 my-3 md:w-3/5 mx-auto rounded-full w-11/12 text-white">
 <a href="/search">
  <span className="material-symbols-outlined h-5 w-5" >
     search
