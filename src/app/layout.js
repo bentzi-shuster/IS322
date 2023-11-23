@@ -20,6 +20,7 @@ export default async function RootLayout({ children }) {
       dark:bg-background-800
       bg-background-600
       h-full
+      min-h-screen
       text-text-200
       '
       >
