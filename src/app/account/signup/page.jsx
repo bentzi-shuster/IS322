@@ -83,7 +83,11 @@ export default function Login() {
 
       {/* </div>
     </form> */}
-
+    <style dangerouslySetInnerHTML={{__html: `
+footer{
+    display: none!important;
+}
+`}}></style>
 <Form 
 data={jsonData}
 />

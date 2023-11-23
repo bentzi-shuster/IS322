@@ -12,8 +12,6 @@ export default async function Home() {
   } = await supabase.auth.getUser()
 // console.log(user)  
 
-
-
 let{ data, error } = await supabase
 .from('Post')
 .select('post_title, post_description, post_visible, post_userid,Post_User_Data(post_user_data_user_id, post_user_data_photo, post_user_data_first_name)')
@@ -28,7 +26,13 @@ console.log(data)
 
   return (
     <>
-
+    {!user && (
+<style dangerouslySetInnerHTML={{__html: `
+footer{
+    display: none!important;
+}
+`}}></style>
+    )}   
 {!user && (
   <div className="hero min-h-screen">
   <div className="hero-content flex-col">
@@ -119,10 +123,10 @@ console.log(data)
   </div>
 
 )}
-    {user && (   
-    <h1> Hello {user.user_metadata["full_name"]}, <br></br>email: {user["email"]}</h1>
+    {/* {user && (   
+    {/* <h1> Hello {user.user_metadata["full_name"]}, <br></br>email: {user["email"]}</h1> 
     
-   ) }
+   ) } */}
 
     <div className="flex flex-col gap-4">
     {data?.map((post, index) => {

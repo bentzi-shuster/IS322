@@ -32,7 +32,7 @@ const [state, formAction] = useFormState(action,result);
   
     <h2 className="text-3xl font-bold align-middle mt-5"
     >
-    Hello {user.current?.user_metadata["full_name"]!==undefined?user.current?.user_metadata["full_name"]:""}
+    {/* Hello {user.current?.user_metadata["full_name"]!==undefined?user.current?.user_metadata["full_name"]:""} */}
     </h2>
     {/* <div>
       email: {user["email"]}

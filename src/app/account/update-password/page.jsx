@@ -33,7 +33,12 @@ export const ResetPWDPage = () => {
     <button
     onClick={()=>updatePWD(password, confirmPassword)}
     
-    >Reset Password</button>    
+    >Reset Password</button> 
+    <style dangerouslySetInnerHTML={{__html: `
+footer{
+    display: none!important;
+}
+`}}></style>  
     </form>
     </>
   )

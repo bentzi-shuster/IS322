@@ -24,7 +24,11 @@ import React from 'react'
       
   return (
 <>
-
+<style dangerouslySetInnerHTML={{__html: `
+footer{
+    display: none!important;
+}
+`}}></style>
 <Form 
 data={jsonData}
 />
