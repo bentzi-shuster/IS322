@@ -64,11 +64,11 @@ console.log(data)
   
   </div>
   <div className="rating absolute right-2 bottom-5">
-  <input type="radio" defaultChecked className="mask mask-star rating pointer-events-none" />
-  <input type="radio" className="mask mask-star rating pointer-events-none" />
-  <input type="radio" className="mask mask-star rating pointer-events-none" />
-  <input type="radio" className="mask mask-star rating pointer-events-none" />
-  <input type="radio" className="mask mask-star rating pointer-events-none" />
+  <input type="radio" defaultChecked className="mask mask-star rating pointer-events-none bg-gray-200" />
+  <input type="radio" className="mask mask-star rating pointer-events-none bg-gray-200" />
+  <input type="radio" className="mask mask-star rating pointer-events-none bg-gray-200" />
+  <input type="radio" className="mask mask-star rating pointer-events-none bg-gray-200" />
+  <input type="radio" className="mask mask-star rating pointer-events-none bg-gray-200" />
 </div>
 </div>
 
@@ -83,11 +83,11 @@ console.log(data)
   <div className='font-semibold'>John Smith</div>
   </div>
   <div className="rating absolute right-2 bottom-5">
-  <input type="radio" defaultChecked className="mask mask-star rating pointer-events-none" />
-  <input type="radio" className="mask mask-star rating pointer-events-none" />
-  <input type="radio" className="mask mask-star rating pointer-events-none" />
-  <input type="radio" className="mask mask-star rating pointer-events-none" />
-  <input type="radio" className="mask mask-star rating pointer-events-none" />
+  <input type="radio" defaultChecked className="mask mask-star rating pointer-events-none bg-gray-200" />
+  <input type="radio" className="mask mask-star rating pointer-events-none bg-gray-200" />
+  <input type="radio" className="mask mask-star rating pointer-events-none bg-gray-200" />
+  <input type="radio" className="mask mask-star rating pointer-events-none bg-gray-200" />
+  <input type="radio" className="mask mask-star rating pointer-events-none bg-gray-200" />
 </div>
 </div>
 
@@ -101,11 +101,11 @@ console.log(data)
   <div className='font-semibold'>Jack Samson</div>
   </div>
   <div className="rating absolute right-2 bottom-5">
-  <input type="radio" defaultChecked className="mask mask-star rating pointer-events-none" />
-  <input type="radio" className="mask mask-star rating pointer-events-none" />
-  <input type="radio" className="mask mask-star rating pointer-events-none" />
-  <input type="radio" className="mask mask-star rating pointer-events-none" />
-  <input type="radio" className="mask mask-star rating pointer-events-none" />
+  <input type="radio" defaultChecked className="mask mask-star rating pointer-events-none bg-gray-200" />
+  <input type="radio" className="mask mask-star rating pointer-events-none bg-gray-200" />
+  <input type="radio" className="mask mask-star rating pointer-events-none bg-gray-200" />
+  <input type="radio" className="mask mask-star rating pointer-events-none bg-gray-200" />
+  <input type="radio" className="mask mask-star rating pointer-events-none bg-gray-200" />
 </div>
 </div>
 

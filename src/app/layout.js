@@ -19,7 +19,7 @@ export default async function RootLayout({ children }) {
       className='
       dark:bg-background-800
       bg-background-600
-      h-screen
+      h-full
       text-text-200
       '
       >
